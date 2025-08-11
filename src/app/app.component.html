@@ -1,4 +1,31 @@
 <h1>Hello There Angular 18</h1>
 <app-employee-list></app-employee-list>
 
-<app-data-binding></app-data-binding>
+<!-- <app-data-binding></app-data-binding> -->
+
+
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <app-custom-checkbox formControlName="agree"></app-custom-checkbox>
+
+  <app-custom-radio
+    formControlName="gender"
+    [options]="['Male', 'Female']"
+  ></app-custom-radio>
+
+  <app-custom-select
+    formControlName="country"
+    [options]="['India', 'USA', 'UK']"
+  ></app-custom-select>
+
+  <button type="submit">Submit</button>
+</form>
+
+<br>
+
+<app-product-list></app-product-list>
+
+<app-change-detection-practice></app-change-detection-practice>
+
+<app-signals></app-signals>
+
