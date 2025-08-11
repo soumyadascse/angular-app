@@ -1,0 +1,20 @@
+<table border="3" cellPadding="10" cellSpacing="10">
+    <tr>
+        <th>Index</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    @for (user of users; track $index) {
+        <tr>
+            <td [appPassFailColor]="user.id">{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone }}</td>
+        </tr>
+    }
+</table>
+
+<button (click)="reload()">Change On Push</button>
+
+<h3>Test Signal Data: {{ testSignalData() }}</h3>
